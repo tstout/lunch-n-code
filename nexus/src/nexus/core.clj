@@ -19,7 +19,7 @@
     http/get
     :body))
 
-(defn parse-order
+(defn parse-meta
   "Convert the artifact xml into a zipper for
   convenient processing."
   [xml]
@@ -35,6 +35,15 @@
       #(xml1-> % :artifact :latestRelease text)
       (xml-> root :data))
     first))
+
+(defn find-version
+  "Query nexus for the latest version of the specified artifact id"
+  [id]
+  (->
+    id
+    fetch-meta
+    parse-meta
+    latest-version))
 
 ;;
 ;; REPL experiments

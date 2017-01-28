@@ -1,6 +1,8 @@
 # nexus
 
-A Clojure library designed to ... well, that part is up to you.
+Find the latest version of a library in the TCS nexus repository.
+Chris Crawford and I hacked on this during the lunch-n-code on 
+27-Jan-2017.
 
 ## Usage
 

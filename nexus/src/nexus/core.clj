@@ -28,7 +28,7 @@
       zip/xml-zip))
 
 (defn latest-version
-  "Given a zipper root, extract the latest release version"
+  "Given an xml zipper root, extract the latest release version"
   [root]
   (->
     (map
